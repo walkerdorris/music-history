@@ -1,0 +1,25 @@
+.musicstuff {
+  padding: 0;
+  list-style: none;
+  height: 50em;
+  display: flex;
+  -webkit-flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  background: tomato;
+  padding: 10px;
+  width: 100px;
+  border: 3px solid rgba(0,0,0,.2);
+  color: white;
+}
+
+.musicstuff > nav { 
+  flex: 1 100%;
+}
+
+.form {
+  flex-grow: 1;
+}
+
+.songNameBackground {
+	flex-grow: 1;
+}
