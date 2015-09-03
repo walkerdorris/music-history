@@ -1,0 +1,19 @@
+{
+	"songs": [
+	{
+		"title": "A",
+		"artist": "B",
+		"album": "C"
+	},
+	{
+		"title": "D",
+		"artist": "E",
+		"album": "F"
+	},
+	{
+		"title": "G",
+		"artist": "H",
+		"album": "I"
+	}
+	]
+}
