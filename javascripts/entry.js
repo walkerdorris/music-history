@@ -1,11 +1,13 @@
-requirejs.config({
-        baseUrl: "./javascripts",
-    paths: {
-        "jquery": "../bower_components/jquery/dist/jquery.min"
-    }
 
+require.config({
+	paths: {
+		"jquery": "../resources/bower_components/jquery/dist/jquery.min",
+		"bootstrap": "../resources/bower_components/bootstrap/dist/js/bootstap.min"
+	},
+	shim: {
+		"bootstrap": ["jquery"]
+	}
 });
 
-require(["main"], function() {
 
-});
+requirejs(["main"]);

@@ -2,7 +2,8 @@
 <html>
 <head>
   <title>MUSIC PROJECT</title>
-  <link rel="stylesheet" href="main.scss"> 
+  <link rel="stylesheet" href="/resources/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="main.css"> 
 </head>
 <body class="flex-container">
 <!-- ******************************************************************************** NAVIGATION BAR ************************************************************* -->
@@ -84,14 +85,13 @@
 
 <!-- ******************************************************* THE FIVE LIST ******************************************************* -->
   
-    <main class="artist-content">
+    <main class="song-list">
 
     </main>
  
   <footer>
-  <button type="submit" value="filter" id="more">More ></button>
-  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script src="javascripts/main.js"></script>
+  <button type="submit" value="filter" class="add-more">More ></button>
+  <script data-main="javascripts/entry" src="resources/bower_components/requirejs/require.js"></script>
 </body>
 </html>
 
