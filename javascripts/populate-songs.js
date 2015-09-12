@@ -6,7 +6,7 @@ define(function() {
 				url: "songs.json",
 				dataType: "json",
 			}).done(function(JSONObject) {
-				dom.makeSongList(JSONObject.songs);
+				callback(JSONObject);
 			});
 		}
 	};

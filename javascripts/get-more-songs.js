@@ -5,7 +5,7 @@ define(function() {
 				url: "songstwo.json",
 				dataType: "json",
 			}).done(function(songs) {
-				callback(songs.songs);
+				callback(songs);
 			});
 		}
 	};

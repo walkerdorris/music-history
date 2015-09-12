@@ -3,11 +3,12 @@
 <head>
   <title>MUSIC PROJECT</title>
   <link rel="stylesheet" href="/resources/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="main.css"> 
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+  <script data-main="javascripts/entry" src="resources/bower_components/requirejs/require.js"></script>
 </head>
 <body class="flex-container">
 <!-- ******************************************************************************** NAVIGATION BAR ************************************************************* -->
-<nav class="flex-container main__header">
+<nav class="navbar navbar-inverse">
   <ul>
     <li><a href="#">View music</a></li>
     <li>|</li>
@@ -85,13 +86,16 @@
 
 <!-- ******************************************************* THE FIVE LIST ******************************************************* -->
   
-    <main class="song-list">
+    <div id="song-list">
 
-    </main>
+    </div>
+    <div id="song-list-two">
+
+    </div>
  
   <footer>
   <button type="submit" value="filter" class="add-more">More ></button>
-  <script data-main="javascripts/entry" src="resources/bower_components/requirejs/require.js"></script>
+
 </body>
 </html>
 
