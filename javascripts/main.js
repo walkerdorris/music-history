@@ -1,4 +1,4 @@
-define(['jquery', 'hbs','populate-songs', 'get-more-songs', 'dom-access','bootstrap'], function($, Handlebars, populate, getMoreSongs, dom) {
+define(['jquery','lodash', 'firebase', 'hbs','populate-songs', 'populate-filter-form', 'dom-access','bootstrap'], function($, _, firebase, Handlebars, populate, getMoreSongs, dom) {
 
 	$(".dropdown-toggle").dropdown();
 
@@ -23,3 +23,5 @@ define(['jquery', 'hbs','populate-songs', 'get-more-songs', 'dom-access','bootst
 	});
 
 });
+
+//refer to loadSongs and make changes when necessary

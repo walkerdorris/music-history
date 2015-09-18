@@ -1,0 +1,49 @@
+{
+	"songs": [
+	{
+		"title": "Medication",
+		"artist": "Queens of the Stone Age",
+		"album": "Lullabies To Paralyze"
+	},
+	{
+		"title": "From A Motel 6",
+		"artist": "Yo La Tengo",
+		"album": "Painful"
+	},
+	{
+		"title": "Supersonic",
+		"artist": "Oasis",
+		"album": "Definitely Maybe"
+	},
+	{
+		"title": "The New Pollution",
+		"artist": "Beck",
+		"album": "Odelay"
+	},
+	{
+		"title": "Winnebago",
+		"artist": "Foo Fighters",
+		"album": "Foo Fighters"
+	},
+	{
+		"title": "Just",
+		"artist": "Radiohead",
+		"album": "The Bends"
+	},
+	{
+		"title": "I Sat By the Ocean",
+		"artist": "Queens of the Stone Age",
+		"album": "...Like Clockwork"
+	},
+	{
+		"title": "Big Day Coming",
+		"artist": "Yo La Tengo",
+		"album": "Painful"	
+	},
+	{
+		"title": "Turn Away",
+		"artist": "Beck",
+		"album": "Morning Phase"
+	}
+	]
+}

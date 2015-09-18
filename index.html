@@ -1,4 +1,100 @@
-<!DOCTYPE html>
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>NSS Starter Kit - Music History</title>
+
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap-material-design/dist/css/material-fullpalette.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-material-red-700">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Music History</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">List songs <span class="sr-only">(current)</span></a></li>
+          <li><a href="songForm.html">Add song</a></li>
+        </ul>
+        <form class="navbar-form navbar-right" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search songs">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3 padded--large">
+
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="dropdown">
+              <button class="btn dropdown-toggle btn-material-red-400" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Artists
+                <span class="caret"></span>
+              </button>
+              <ul id="artists" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="dropdown">
+              <button class="btn btn-material-red-400 dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Albums
+                <span class="caret"></span>
+              </button>
+              <ul id="albums" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              </ul>
+            </div>            
+          </div>
+        </div>
+        <button type="button" id="clearFilter" class="btn btn-info">Clear Filter</button>
+
+
+      </div>
+      <div class="col-sm-9 padded--medium">
+        <div id="songList">
+          
+        </div>
+        <!-- <button id="loadMoreSongs" class="separation--top">Load More &gt;</button> -->
+      </div>
+    </div>
+  </div>
+  
+  <script data-main="javascripts/main" src="resources/bower_components/requirejs/require.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
 <html>
 <head>
   <title>MUSIC PROJECT</title>
@@ -6,20 +102,27 @@
   <link rel="stylesheet" type="text/css" href="styles/main.css">
   <script data-main="javascripts/entry" src="resources/bower_components/requirejs/require.js"></script>
 </head>
-<body class="flex-container">
+<body class="flex-container"> -->
+
 <!-- ******************************************************************************** NAVIGATION BAR ************************************************************* -->
-<nav class="navbar navbar-inverse">
+<!-- <div class="row">
+  <div class="col-md-4" id="viewmusic">View Music</div>
+  <div class="col-md-4" id="addmusic">Add Music</div>
+  <div class="col-md-4" id="profile">Profile</div>
+</div> -->
+
+<!-- <nav class="navbar navbar-inverse">
   <ul>
-    <li><a href="#">View music</a></li>
+    <li class="col-mid-4"><a href="#">View music</a></li>
     <li>|</li>
-    <li><a href="#">Add music</a></li>
+    <li class="col-mid-4"><a href="#">Add music</a></li>
     <li>|</li>
-    <li><a href="#">Profile</a></li>
+    <li class="col-mid-4"><a href="#">Profile</a></li>
   </ul>
-</nav>
+</nav> -->
 
 <!-- ************************************************** MUSIC FORM ****************************************** -->
-<div class="flex-container left__sidebar">
+<!-- <div class="flex-container-left">
 <form action="form.html" method="post" class="form">
  
     
@@ -82,23 +185,23 @@
     <button type="submit" value="filter" class="filterButton">Filter</button>
     
 </form>
-</div>
+</div> -->
 
 <!-- ******************************************************* THE FIVE LIST ******************************************************* -->
-  
-    <div id="song-list">
+    <!-- <div class="songsdiv">
+      <div id="song-list">
 
-    </div>
-    <div id="song-list-two">
+      </div>
+      <div id="song-list-two">
 
+      </div>
     </div>
- 
   <footer>
   <button type="submit" value="filter" class="add-more">More ></button>
 
 </body>
 </html>
-
+ -->
 
 
 
