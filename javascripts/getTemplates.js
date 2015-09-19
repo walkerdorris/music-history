@@ -1,7 +1,7 @@
 define(["hbs",
 		"hbs!../templates/songs",
-		"hbs!../templates/filteredArtists",
-		"hbs!../templates/filteredAlbums"],
+		"hbs!../templates/artist",
+		"hbs!../templates/album"],
 function(Handlebars, songTemplate, artistTemplate, albumTemplate) {
 	
 	var templates = {};

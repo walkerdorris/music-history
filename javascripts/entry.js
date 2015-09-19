@@ -3,31 +3,32 @@ require.config({
 	baseURL: "./javascripts",
 	paths: {
 		"jquery": "../resources/bower_components/jquery/dist/jquery.min",
-		"firebase": "../resources/bower_components/firebase",
+		"firebase": "../resources/bower_components/firebase/firebase",
 		"lodash":"../resources/bower_components/lodash/lodash.min",
 		"hbs": "../resources/bower_components/require-handlebars-plugin/hbs",
 		"bootstrap": "../resources/bower_components/bootstrap/dist/js/bootstrap.min"
 	},
-	shim: {
-		"bootstrap": ["jquery"]
+	"shim": {
+		"bootstrap": ["jquery"],
 		"firebase": {
 			exports: "Firebase"
 		}
 	}
 });
 
+require(["main", "bootstrap"], function() {});
+
 requirejs(
-	["jquery", "lodash", "firebase", "hbs", "bootstrap", "getUnique", "getTemplates", "eventHandlers"],
-			function($, _, _firebase, Handlebars, bootstrap, unique, templates, eventHandlers) {
+	["jquery", "lodash", "firebase", "hbs", "bootstrap", "getUnique", "getTemplates"],
+			function($, _, _firebase, Handlebars, bootstrap, unique, templates) {
 				var allSongsObject = {};
 				var allSongsArray = [];
 				var originalSongsArray = [];
 
-				eventHandlers.init({songArray: originalSongsArray});
 
 				var myFirebaseRef = new Firebase("https://walker-music-history.firebaseio.com/");
 
-				var myFirebaseRef.child("songs").on("value", function(snapshot) {
+				myFirebaseRef.child("songs").on("value", function(snapshot) {
 
 					var songs = snapshot.val();
 
@@ -43,7 +44,7 @@ requirejs(
 
 					$("#songList").html(templates.songs(allSongsObject));
 
-					var uniqueAlbums = unique(allSongsArray).uniqueArtists;
+					var uniqueArtists = unique(allSongsArray).uniqueArtists;
 
 					$("#artists").html(templates.artists({artists:uniqueArtists}));
 
@@ -51,10 +52,10 @@ requirejs(
 
 					$("#albums").html(templates.albums({albums:uniqueAlbums}));
 
-					evenHandlers.updateSongs(originalSongsArray);
+					// p
 				});
 
-				$.material.init();
+				// $.material.init();
 
 				}
 				);

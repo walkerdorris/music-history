@@ -6,12 +6,15 @@ requirejs.config({
 		"bootstrap": "../resources/bower_components/bootstrap/dist/js/bootstrap.min"
 	},
 	shim: {
-		"bootstrap": ["jquery"]
+		"bootstrap": ["jquery"],
+		"firebase": {
+			exports: "Firebase"
+		}
 	}
 });
 
 requirejs(["jquery", "hbs", "bootstrap","loadSongs"],
-		  function($, Handlebars, bootstrap, material, loadSongs) {
+		  function($, Handlebars, bootstrap, loadSongs) {
 		  	var selectedArtist = "", selectedAlbum = "";
 
 		  	
@@ -27,15 +30,15 @@ requirejs(["jquery", "hbs", "bootstrap","loadSongs"],
 		  	$("#addSong").click(function(e) {
 
 		  		var newSong = {
-		  			"name": $("#songName").val(),
-		  			"artist": selectedArtist || $("#artistName").val(),
-		  			"album": selectedAlbum || $("#albumName").val(),
+		  			"title": $("#songName").val(),
+		  			"artist": $("#artistName").val(),
+		  			"album": $("#albumName").val(),
 		  		};
 
 		  		console.log("newSong", newSong);
 
 		  		$.ajax({
-		  			url:"https://walker-music-history.firebaseio.com/",
+		  			url:"https://walker-music-history.firebaseio.com/songs.json",
 		  			method: "POST",
 		  			data: JSON.stringify(newSong)
 		  		}).done(function(addedSong) {

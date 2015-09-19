@@ -31,7 +31,7 @@ define(["jquery", "lodash", "getTemplates", "getUnique"], function($, _, templat
 			var matchingAlbums = _.chain(config.originalSongsArray)
 								  .filter(function(song) {
 								  	return song.artist === selectedArtist;
-								  });
+								  })
 								  .uniq("album.name")
 								  .pluck("album")
 								  .value();

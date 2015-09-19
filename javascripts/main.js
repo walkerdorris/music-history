@@ -7,21 +7,25 @@ define(['jquery','lodash', 'firebase', 'hbs','populate-songs', 'populate-filter-
 	populate.getSongs(function(songs) {
 		console.log(songs);
 		require(['hbs!../templates/songs'], function(songTemplate) {
-        $("#song-list").html(songTemplate(songs));
+        $("#songList").html(songTemplate(songs));
       });
+		require(['hbs!../templates/artist'], function(artistTemplate) {
+		$("#artists").html(artistTemplate(songs));
+		});
+		require(['hbs!../templates/album'], function(albumTemplate) {
+		$("#albums").html(albumTemplate(songs));
+		})
 	});
 
-	$(".add-more").on('click', function () {
-		getMoreSongs.getMore(function(songstwo) {
-			console.log(songstwo);
-			require(['hbs!../templates/songs'], function(songTemplate) {
-        $("#song-list-two").html(songTemplate(songstwo));
-      });
+
+
+	
+      
 		});
 
 	
-	});
+	
 
-});
+
 
 //refer to loadSongs and make changes when necessary
